@@ -1,0 +1,97 @@
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cookie:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #ca1515;
+  --black: #000;
+  --white: #fff;
+  --text-color: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  color: var(--text-color);
+}
+
+button,
+input,
+[tabindex] {
+  outline: none;
+  border: none;
+}
+
+a[href] {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+//Fonts emmbeded
+@font-face {
+  font-family: Montserrat;
+  src: url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Cookie;
+  src: url("/assets/fonts/Cookie/Cookie-Regular.ttf");
+  font-weight: 400;
+}
+
+//Custom tippy tooltip
+body {
+  .tippy-box {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    background-color: rgba(84, 84, 84, 0.92);
+  }
+
+  .tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
+  }
+
+  .tippy-content {
+    padding: 8px 9px;
+  }
+
+  .tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+    top: -8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  // * {
+  //   overflow-x: hidden;
+  // }
+}

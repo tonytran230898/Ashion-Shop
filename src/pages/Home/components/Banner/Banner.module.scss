@@ -1,0 +1,69 @@
+.banner {
+  height: 500px;
+  text-align: center;
+  background-image: url("https://technext.github.io/ashion/img/banner/banner-1.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.banner__wrapper {
+  margin-left: 20%;
+  margin: auto;
+}
+
+.wrapper__silde {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__text {
+  span {
+    font-size: 1.8rem;
+    color: var(--primary);
+  }
+
+  h1 {
+    font-size: 8rem;
+    color: var(--text-color);
+    font-family: "Cookie", cursive;
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    position: relative;
+    padding: 0 0 3px;
+    display: inline-block;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: var(--primary);
+      content: "";
+    }
+  }
+}
+
+a[class="carousel-control-prev"],
+a[class="carousel-control-next"] {
+  display: none;
+}
+
+//Responsive
+@media screen and (max-width: 767px) {
+  .banner__text {
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+}

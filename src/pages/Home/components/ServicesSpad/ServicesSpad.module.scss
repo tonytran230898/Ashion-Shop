@@ -1,0 +1,31 @@
+.services {
+  padding: 80px 0 50px 0;
+}
+
+.services__item {
+  margin-bottom: 20px;
+
+  h6 {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #666666;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 15px 0;
+  }
+}
+
+.services__icon {
+  float: left;
+  font-size: 4.8rem;
+  font-weight: 300;
+  color: var(--primary);
+  margin-right: 18px;
+}

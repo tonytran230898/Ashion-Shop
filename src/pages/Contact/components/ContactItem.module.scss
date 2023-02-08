@@ -1,0 +1,108 @@
+.contact__address {
+  margin-bottom: 45px;
+
+  h5 {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 20px;
+
+    h6 {
+      color: var(--text-color);
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+
+      .contact__icon {
+        font-size: 1.6rem;
+        color: var(--primary);
+        margin-right: 5px;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 15px;
+      color: #444444;
+    }
+  }
+}
+
+.contact__form {
+  margin-bottom: 45px;
+
+  h5 {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  form input {
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #444444;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+  }
+
+  form textarea {
+    height: 130px;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 12px;
+    font-size: 14px;
+    color: #444444;
+    border: 1px solid #e1e1e1;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    resize: none;
+  }
+
+  form .error__message {
+    font-size: 14px;
+    color: #ca1515;
+    margin-top: -20px;
+    margin-left: 10px;
+  }
+
+  .site-btn {
+    font-size: 14px;
+    color: #ffffff;
+    background: #ca1515;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+  }
+}
+
+.contact__map {
+  width: 100%;
+  height: 100%;
+}
+
+// Responsive
+
+@media screen and (max-width: 767px) {
+  .contact__map {
+    width: 100%;
+    height: 570px;
+  }
+}
