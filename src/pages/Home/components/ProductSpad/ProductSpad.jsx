@@ -6,7 +6,7 @@ import CardProducts from "./CardProducts/CardProducts";
 
 const cx = classNames.bind(styles);
 
-function ProductSpad() {
+function ProductSpad({ handlRender }) {
   const listCategory = [
     {
       id: 1,
@@ -153,7 +153,7 @@ function ProductSpad() {
             </ul>
           </Col>
         </Row>
-        <CardProducts saveFilter={saveFilter} />
+        <CardProducts handlRender={handlRender} saveFilter={saveFilter} />
       </Container>
     </section>
   );

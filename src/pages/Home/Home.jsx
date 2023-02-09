@@ -10,11 +10,11 @@ import ServicesSpad from "./components/ServicesSpad/ServicesSpad";
 
 const cx = classNames.bind(styles);
 
-function Home() {
+function Home({ handlRender }) {
   return (
     <div className={cx("wrapper")}>
       <Categories />
-      <ProductSpad />
+      <ProductSpad handlRender={handlRender} />
       <Banner />
       <Trend />
       <Discount />

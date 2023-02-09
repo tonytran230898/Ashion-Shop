@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
-function CardProducts({ saveFilter, listCard }) {
+function CardProducts({ saveFilter, listCard, handlRender }) {
   const [showPopup, setShowPopup] = useState(false);
   const [imgPopup, setImgPopup] = useState("");
 
@@ -28,6 +28,7 @@ function CardProducts({ saveFilter, listCard }) {
       setShowPopup(false);
     }
   }
+
   const handleAddProductToCart = (product, index) => {
     let data = {
       id: product.id,
@@ -45,11 +46,12 @@ function CardProducts({ saveFilter, listCard }) {
       if (!exist) {
         productStorage.push(data);
         localStorage.setItem("listProduct", JSON.stringify(productStorage));
+        handlRender();
       }
     } else {
       if (product) {
         localStorage.setItem("listProduct", JSON.stringify([data]));
-        console.log("saved");
+        handlRender();
       }
     }
   };
@@ -92,7 +94,7 @@ function CardProducts({ saveFilter, listCard }) {
                           <BsHeart className={cx("action__icon")} />
                         </span>
                       </li>
-                      <li onClick={() => console.log(item)}>
+                      <li onClick={() => handleAddProductToCart(item, index)}>
                         <span>
                           <RiShoppingBag2Line className={cx("action__icon")} />
                         </span>

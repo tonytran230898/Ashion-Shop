@@ -79,3 +79,11 @@ ul {
     display: inline-block;
   }
 }
+
+// Responsive
+
+@media screen and (max-width: 768px) {
+  .content {
+    margin-top: -50%;
+  }
+}

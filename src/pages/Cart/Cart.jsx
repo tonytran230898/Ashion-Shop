@@ -12,7 +12,7 @@ const listcode = [
   { code: "blackfriday", value: 15 },
 ];
 
-function Cart() {
+function Cart({ handlRender }) {
   const productStorage = JSON.parse(localStorage.getItem("listProduct"));
 
   let [listCart, setLisCart] = useState([]);
@@ -29,7 +29,9 @@ function Cart() {
     let arr = [...productStorage];
     arr = [...arr.slice(0, index), ...arr.slice(index + 1)];
     localStorage.setItem("listProduct", JSON.stringify(arr));
+
     setLisCart(arr);
+    handlRender();
   };
   const handleUpdateNext = (data, index) => {
     let arr = [...productStorage];
@@ -48,6 +50,7 @@ function Cart() {
     });
     localStorage.setItem("listProduct", JSON.stringify(arr));
     setLisCart(arr);
+    handlRender();
   };
   const handleUpdatePrev = (data, index) => {
     let arr = [...productStorage];
@@ -69,6 +72,7 @@ function Cart() {
     });
     localStorage.setItem("listProduct", JSON.stringify(arr));
     setLisCart(arr);
+    handlRender();
   };
 
   const handleTotal = () => {

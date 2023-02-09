@@ -42,12 +42,12 @@ export default function Header() {
       name: "SHOP",
     },
     {
-      to: "/contact",
-      name: "CONTACT",
-    },
-    {
       to: "/cart",
       name: "CART",
+    },
+    {
+      to: "/contact",
+      name: "CONTACT",
     },
   ];
 
@@ -101,7 +101,7 @@ export default function Header() {
                     <span>
                       <BsHeart />
                     </span>
-                    <div className={cx("tip")}>2</div>
+                    {/* <div className={cx("tip")}>0</div> */}
                   </Link>
                 </li>
                 <li>
@@ -109,10 +109,12 @@ export default function Header() {
                     <span>
                       <RiShoppingBag2Line />
                     </span>
-                    <div className={cx("tip")}>
+                    <div
+                      className={productStorage.length > 0 ? cx("tip") : cx("")}
+                    >
                       {productStorage && productStorage.length > 0
                         ? productStorage.length
-                        : 0}
+                        : ""}
                     </div>
                   </Link>
                 </li>
@@ -151,7 +153,7 @@ export default function Header() {
                     <span>
                       <BsHeart />
                     </span>
-                    <div className={cx("mobile__tip")}>2</div>
+                    {/* <div className={cx("mobile__tip")}></div> */}
                   </Link>
                 </li>
                 <li>
@@ -159,10 +161,14 @@ export default function Header() {
                     <span>
                       <RiShoppingBag2Line />
                     </span>
-                    <div className={cx("mobile__tip")}>
+                    <div
+                      className={
+                        productStorage.length > 0 ? cx("mobile__tip") : cx("")
+                      }
+                    >
                       {productStorage && productStorage.length > 0
                         ? productStorage.length
-                        : 0}
+                        : ""}
                     </div>
                   </Link>
                 </li>
