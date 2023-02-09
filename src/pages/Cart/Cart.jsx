@@ -21,7 +21,7 @@ function Cart({ handlRender }) {
   const [discount, setDiscount] = useState(0);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    if (productStorage && productStorage.length > 0) {
+    if (productStorage && productStorage?.length > 0) {
       setLisCart(productStorage);
     }
   }, []);
@@ -76,7 +76,7 @@ function Cart({ handlRender }) {
   };
 
   const handleTotal = () => {
-    if (productStorage && productStorage.length > 0) {
+    if (productStorage && productStorage?.length > 0) {
       let listTotal = [];
       productStorage.forEach((item) => {
         return listTotal.push(item.total);

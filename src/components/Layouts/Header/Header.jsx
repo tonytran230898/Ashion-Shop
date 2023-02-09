@@ -110,10 +110,12 @@ export default function Header() {
                       <RiShoppingBag2Line />
                     </span>
                     <div
-                      className={productStorage.length > 0 ? cx("tip") : cx("")}
+                      className={
+                        productStorage?.length > 0 ? cx("tip") : cx("")
+                      }
                     >
-                      {productStorage && productStorage.length > 0
-                        ? productStorage.length
+                      {productStorage && productStorage?.length > 0
+                        ? productStorage?.length
                         : ""}
                     </div>
                   </Link>
@@ -163,11 +165,11 @@ export default function Header() {
                     </span>
                     <div
                       className={
-                        productStorage.length > 0 ? cx("mobile__tip") : cx("")
+                        productStorage?.length > 0 ? cx("mobile__tip") : cx("")
                       }
                     >
-                      {productStorage && productStorage.length > 0
-                        ? productStorage.length
+                      {productStorage && productStorage?.length > 0
+                        ? productStorage?.length
                         : ""}
                     </div>
                   </Link>

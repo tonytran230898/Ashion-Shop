@@ -39,7 +39,7 @@ function CardProducts({ saveFilter, listCard, handlRender }) {
       total: product.price,
     };
     const productStorage = JSON.parse(localStorage.getItem("listProduct"));
-    if (productStorage && productStorage.length > 0) {
+    if (productStorage && productStorage?.length > 0) {
       let exist = productStorage.find((item) => {
         return item.id === product.id;
       });
